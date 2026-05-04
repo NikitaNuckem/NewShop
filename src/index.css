@@ -1,0 +1,300 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.header a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(255, 77, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* PRICE */
+.price-block {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.new-price {
+  color: #ff4d00;
+  font-weight: bold;
+}
+
+.discount {
+  color: green;
+}
+
+/* BUTTON */
+.card button {
+  padding: 10px;
+  border: none;
+  background: #ff4d00;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #e63e00;
+}
+
+/* LINK */
+.card a {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ff4d00;
+  border-radius: 6px;
+  color: #ff4d00;
+}
+
+.card a:hover {
+  background: #ff4d00;
+  color: white;
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background: #ff4d00;
+  color: white;
+}
+
+/* DETAILS */
+.details-wrapper {
+  padding: 30px;
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.details-card {
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.details-left {
+  width: 40%;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbs img {
+  width: 60px;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+}
+
+.thumbs img.active {
+  border: 2px solid #ff4d00;
+  opacity: 1;
+}
+
+.details-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* QTY */
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty button {
+  padding: 5px 10px;
+  border: none;
+  background: #ff4d00;
+  color: white;
+  cursor: pointer;
+}
+
+/* ADD BTN */
+.add-btn {
+  padding: 12px;
+  background: #ff4d00;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 200px;
+}
+
+/* CART */
+.cart {
+  padding: 20px;
+}
+
+.cart-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.cart-card img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.cart-info {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.cart-price {
+  font-weight: bold;
+  color: #ff4d00;
+}
+
+.total {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .filters {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .details-card {
+    flex-direction: column;
+  }
+
+  .details-left,
+  .details-right {
+    width: 100%;
+  }
+
+  .thumbs img {
+    width: 50px;
+  }
+
+  .cart-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
